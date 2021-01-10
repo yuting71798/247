@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <link href="https://jqmdesigner.appspot.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>
-    $(document).on("mobileinit", function () {
-      $.mobile.autoInitializePage = false;
-      $.mobile.hashListeningEnabled = false;
-    });
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    function mobileInitPage() {
-      $.mobile.hashListeningEnabled = true;
-      $.mobile.initializePage();
-    };
+  <link href="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.css" rel="stylesheet">
+  <link href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="https://s3.amazonaws.com/codiqa-cdn/codiqa.ext.js"></script>
+
+  <script src="script.js"></script>
+  <script type="text/javascript">
   </script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <!-- Uncomment the following to include cordova in your android project -->
-  <!--<script src="https://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
-  <!-- GK Loader use RequireJS to load module -->
-  <script src="https://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
-  <!--Plug in GK-->
-  <script src="https://jqmdesigner.appspot.com/components/jquery.gk/jquery.gk.min.js"></script>
-  <!-- Load GK components -->
-  <script components="https://jqmdesigner.appspot.com/components/gk-jquerymobile/content.html,https://jqmdesigner.appspot.com/components/gk-ext/gk-text.html,https://jqmdesigner.appspot.com/components/gk-jquerymobile/grid.html,https://jqmdesigner.appspot.com/components/gk-jquerymobile/page.html,https://jqmdesigner.appspot.com/components/gk-jquerymobile/button.html,https://jqmdesigner.appspot.com/components/gk-jquerymobile/footer.html,https://jqmdesigner.appspot.com/components/gk-jquerymobile/block.html"
-  callback="mobileInitPage" src="https://jqmdesigner.appspot.com/components/gk-loader/gk-loader.js"></script>
-  <title>EZo App</title>
 </head>
-
-<body gk-app>
-  <!-- Page: home  -->
-  <div is="page" id="home" data-role="page">
-    <div is="content" role="main" class="ui-content">
-      <h1 is="gk-text" style="text-align:center;">台中美食餐廳</h1>
-      <div is="grid" class="ui-grid-a" style="height:95px">
-        <div is="block" class="ui-block-a" style="height:100%">
-          <img is="dragable" src="https://lh5.googleusercontent.com/-0A2gwHnDmqg/Uw2QRVfq3XI/AAAAAAAA3PE/lTSK7NlbrLk/s000/house.png" style="width:60px; margin:5px 10px 5px 40px">
-          <h5 is="gk-text" style="text-align:center; margin-top:-5px;"><a a href="https://yuting71798.github.io/247/qqaaa.html" rel="external">餐廳介紹</h5>
-        </div>
-        <div is="block" class="ui-block-b" style="height:100%">
-          <img is="dragable" src="https://lh3.googleusercontent.com/-MGfR1-E9G7U/Uw2QSea8i1I/AAAAAAAA3Pc/KKurF06CjRs/s000/search.png" style="width:70px; margin-left:35px;">
-          <h5 is="gk-text" style="text-align:center; margin-top:-5px;"><a a href="https://yuting71798.github.io/247/yy.html" rel="external">菜品介紹</h5>
-        </div>
-      </div>
-      <div is="grid" class="ui-grid-a" style="height:95px">
-        <div is="block" class="ui-block-a" style="height:100%">
-          <img is="dragable" src="https://lh5.googleusercontent.com/-PDT9W4M6E2Y/Uw2QQoRNiQI/AAAAAAAA3O4/t3GOvaPQrzs/s000/favourite.png" style="width:70px; margin:3px 10px -3px 35px">
-          <h5 is="gk-text" style="text-align:center; margin-top:-5px;"><a a href="https://yuting71798.github.io/247/zz.html" rel="external">點餐系統</h5>
-        </div>
-        <div is="block" class="ui-block-b" style="height:100%">
-          <img is="dragable" src="https://yuting71798.github.io/247/aas.png" style="width:70px; margin:0px 10px 3px 38px">
-          <h5 is="gk-text" style="text-align:center; margin-top:-5px;"><a a href="https://yuting71798.github.io/247/bb.html" rel="external">菜色秀</h5>
-        </div>
-      </div>
+<body>
+<div data-role="page" data-control-title="Home" id="page1">
+    <div data-theme="b" data-role="header">
+        <h1 class="ui-title">
+            台中美食餐廳
+        </h1>
     </div>
-    <div is="footer" data-role="footer" data-position="fixed" data-theme="b">
-      <h3>NCUT</h3>
-   
-    
+    <div role="main" class="ui-content">
+        <a is="button" class="ui-btn" a href="https://yuting71798.github.io/247/qqaaa.html" rel="external">餐廳推薦</a>
+	   
+		<a is="button" class="ui-btn" a href="https://yuting71798.github.io/247/yy.html" rel="external">菜品介紹</a>
+	
+		<a is="button" class="ui-btn" a href="https://yuting71798.github.io/247/zz.html" rel="external">點餐系統</a>
+		
+		<a is="button" class="ui-btn" a href="https://yuting71798.github.io/247/bb.html" rel="external">菜色秀</a>
+     
     </div>
- 
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3 class="ui-title">
+            NCUT
+        </h3>
+    </div>
+</div>
 </body>
-
 </html>
